@@ -1,82 +1,61 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>King Gaming Star</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1a1a1a;
-      color: gold;
-      direction: rtl;
-      text-align: center;
-    }
-
-    header {
-      background-color: #000;
-      padding: 20px 0;
-      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 3em;
-      color: gold;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 10px #fff70044;
-    }
-
-    section {
-      padding: 40px 20px;
-    }
-
-    .links a {
-      margin: 10px;
-      color: gold;
-      text-decoration: none;
-      font-size: 1.2em;
-      border: 2px solid gold;
-      padding: 10px 20px;
-      border-radius: 10px;
-      display: inline-block;
-      transition: background 0.3s;
-    }
-
-    .links a:hover {
-      background: gold;
-      color: #000;
-    }
-
-    footer {
-      background-color: #111;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>King Gaming Star</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://wallpaperaccess.com/full/1570243.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: gold;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 50px;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 2em;
+            text-shadow: 0 0 20px gold;
+        }
+        p {
+            font-size: 1.5em;
+            color: #ffd700;
+        }
+        a.subscribe-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            background: gold;
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 0 15px gold;
+            transition: 0.3s ease-in-out;
+        }
+        a.subscribe-button:hover {
+            background: #ffcc00;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <h1>👑 King Gaming Star 👑</h1>
-  </header>
-
-  <section>
-    <h2>مرحبًا بك في عالم الألعاب</h2>
-    <p>أنا صانع محتوى جيمينج أشارك مغامراتي وألعابي المفضلة معكم من خلال قناتي.</p>
-  </section>
-
-  <section class="links">
-    <h2>تابعني على:</h2>
-    <a href="https://youtube.com/" target="_blank">🎥 يوتيوب</a>
-    <a href="https://tiktok.com/" target="_blank">🎮 تيك توك</a>
-    <a href="https://instagram.com/" target="_blank">📸 إنستجرام</a>
-  </section>
-
-  <footer>
-    &copy; 2025 King Gaming Star - جميع الحقوق محفوظة
-  </footer>
-
+    <div class="overlay">
+        <h1>👑 King Gaming Star 👑</h1>
+        <p>مرحبًا بك في الموقع الرسمي لقناة الألعاب الأقوى!</p>
+        <a class="subscribe-button" href="https://www.youtube.com/" target="_blank">اشترك في القناة</a>
+    </div>
 </body>
 </html>
