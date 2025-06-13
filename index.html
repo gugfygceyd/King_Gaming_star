@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>King Gaming Star</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" type="image/png">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('https://wallpaperaccess.com/full/1570243.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: gold;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.75);
-            padding: 50px;
-            min-height: 100vh;
-        }
-        h1 {
-            font-size: 3em;
-            margin-top: 2em;
-            text-shadow: 0 0 20px gold;
-        }
-        p {
-            font-size: 1.5em;
-            color: #ffd700;
-        }
-        a.subscribe-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            font-size: 1.2em;
-            background: gold;
-            color: black;
-            text-decoration: none;
-            border-radius: 30px;
-            box-shadow: 0 0 15px gold;
-            transition: 0.3s ease-in-out;
-        }
-        a.subscribe-button:hover {
-            background: #ffcc00;
-            transform: scale(1.1);
-        }
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>King Gaming Star</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: gold;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px gold;
+    }
+    p {
+      font-size: 1.3em;
+      max-width: 700px;
+      color: #ffd700;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+    a.subscribe-button {
+      padding: 14px 30px;
+      font-size: 1.2em;
+      background: gold;
+      color: black;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 0 15px gold;
+      transition: all 0.3s ease-in-out;
+    }
+    a.subscribe-button:hover {
+      background: #ffcc00;
+      transform: scale(1.1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-    <div class="overlay">
-        <h1>👑 King Gaming Star 👑</h1>
-        <p>مرحبًا بك في الموقع الرسمي لقناة الألعاب الأقوى!</p>
-        <a class="subscribe-button" href="https://www.youtube.com/" target="_blank">اشترك في القناة</a>
-    </div>
+
+  <!-- خلفية فيديو -->
+  <video class="video-bg" autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2023/10/31/189305-876754222_large.mp4" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو.
+  </video>
+
+  <!-- المحتوى -->
+  <div class="overlay">
+    <h1>👑 King Gaming Star 👑</h1>
+    <p>نحن ملوك عالم الألعاب! اكتشف معنا مغامرات ملحمية، استراتيجيات احترافية، وضحك بلا حدود 🎮🔥<br>انضم إلينا وكن جزءًا من أسطورتنا الرقمية.</p>
+    <a class="subscribe-button" href="https://www.youtube.com/" target="_blank">اشترك في القناة</a>
+  </div>
+
 </body>
 </html>
