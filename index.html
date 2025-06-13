@@ -3,127 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>King Gaming Star</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" type="image/png">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      overflow: hidden;
-    }
-    .video-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
       color: gold;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
+      direction: rtl;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
     }
+
+    header {
+      background-color: #000;
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+    }
+
     h1 {
-      font-size: 3.5em;
-      margin-bottom: 20px;
-      text-shadow: 0 0 15px gold;
+      margin: 0;
+      font-size: 3em;
+      color: gold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 10px #fff70044;
     }
-    p {
-      font-size: 1.3em;
-      max-width: 700px;
-      color: #ffd700;
-      margin-bottom: 30px;
-      line-height: 1.8;
+
+    section {
+      padding: 40px 20px;
     }
-    a.subscribe-button {
-      padding: 14px 30px;
-      font-size: 1.2em;
-      background: gold;
-      color: black;
+
+    .links a {
+      margin: 10px;
+      color: gold;
       text-decoration: none;
-      border-radius: 30px;
-      box-shadow: 0 0 15px gold;
-      transition: all 0.3s ease-in-out;
-      margin-bottom: 20px;
-    }
-    a.subscribe-button:hover {
-      background: #ffcc00;
-      transform: scale(1.1);
-    }
-    .search-box {
-      display: flex;
-      margin-top: 10px;
-      justify-content: center;
-      gap: 10px;
-    }
-    .search-box input[type="text"] {
+      font-size: 1.2em;
+      border: 2px solid gold;
       padding: 10px 20px;
-      font-size: 1em;
-      border: none;
-      border-radius: 30px;
-      width: 250px;
-      outline: none;
+      border-radius: 10px;
+      display: inline-block;
+      transition: background 0.3s;
     }
-    .search-box button {
-      padding: 10px 20px;
-      font-size: 1em;
+
+    .links a:hover {
       background: gold;
-      color: black;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s ease;
-      box-shadow: 0 0 10px gold;
+      color: #000;
     }
-    .search-box button:hover {
-      background: #ffcc00;
-      transform: scale(1.05);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+
+    footer {
+      background-color: #111;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-  <!-- خلفية الفيديو -->
-  <video class="video-bg" autoplay muted loop>
-    <source src="https://cdn.pixabay.com/video/2023/10/31/189305-876754222_large.mp4" type="video/mp4">
-    متصفحك لا يدعم تشغيل الفيديو.
-  </video>
-
-  <!-- المحتوى -->
-  <div class="overlay">
+  <header>
     <h1>👑 King Gaming Star 👑</h1>
-    <p>نحن ملوك عالم الألعاب! اكتشف معنا مغامرات ملحمية، استراتيجيات احترافية، وضحك بلا حدود 🎮🔥<br>انضم إلينا وكن جزءًا من أسطورتنا الرقمية.</p>
-    
-    <!-- زر الاشتراك -->
-    <a class="subscribe-button" href="https://www.youtube.com/" target="_blank">اشترك في القناة</a>
-    
-    <!-- زر البحث -->
-    <form class="search-box" onsubmit="search(event)">
-      <input type="text" id="searchInput" placeholder="ابحث عن لعبة...">
-      <button type="submit">🔍 بحث</button>
-    </form>
-  </div>
+  </header>
 
-  <script>
-    function search(e) {
-      e.preventDefault();
-      const query = document.getElementById("searchInput").value;
-      if (query.trim() !== "") {
-        window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}+king+gaming+star`, '_blank');
-      }
-    }
-  </script>
+  <section>
+    <h2>مرحبًا بك في عالم الألعاب</h2>
+    <p>أنا صانع محتوى جيمينج أشارك مغامراتي وألعابي المفضلة معكم من خلال قناتي.</p>
+  </section>
+
+  <section class="links">
+    <h2>تابعني على:</h2>
+    <a href="https://youtube.com/" target="_blank">🎥 يوتيوب</a>
+    <a href="https://tiktok.com/" target="_blank">🎮 تيك توك</a>
+    <a href="https://instagram.com/" target="_blank">📸 إنستجرام</a>
+  </section>
+
+  <footer>
+    &copy; 2025 King Gaming Star - جميع الحقوق محفوظة
+  </footer>
 
 </body>
 </html>
