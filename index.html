@@ -5,11 +5,7 @@
   <title>King Gaming Star</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" type="image/png">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html {
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,10 +13,8 @@
     }
     .video-bg {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
       object-fit: cover;
       z-index: -1;
     }
@@ -57,10 +51,40 @@
       border-radius: 30px;
       box-shadow: 0 0 15px gold;
       transition: all 0.3s ease-in-out;
+      margin-bottom: 20px;
     }
     a.subscribe-button:hover {
       background: #ffcc00;
       transform: scale(1.1);
+    }
+    .search-box {
+      display: flex;
+      margin-top: 10px;
+      justify-content: center;
+      gap: 10px;
+    }
+    .search-box input[type="text"] {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      width: 250px;
+      outline: none;
+    }
+    .search-box button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background: gold;
+      color: black;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px gold;
+    }
+    .search-box button:hover {
+      background: #ffcc00;
+      transform: scale(1.05);
     }
     @keyframes fadeIn {
       from { opacity: 0; }
@@ -70,7 +94,7 @@
 </head>
 <body>
 
-  <!-- خلفية فيديو -->
+  <!-- خلفية الفيديو -->
   <video class="video-bg" autoplay muted loop>
     <source src="https://cdn.pixabay.com/video/2023/10/31/189305-876754222_large.mp4" type="video/mp4">
     متصفحك لا يدعم تشغيل الفيديو.
@@ -80,8 +104,26 @@
   <div class="overlay">
     <h1>👑 King Gaming Star 👑</h1>
     <p>نحن ملوك عالم الألعاب! اكتشف معنا مغامرات ملحمية، استراتيجيات احترافية، وضحك بلا حدود 🎮🔥<br>انضم إلينا وكن جزءًا من أسطورتنا الرقمية.</p>
+    
+    <!-- زر الاشتراك -->
     <a class="subscribe-button" href="https://www.youtube.com/" target="_blank">اشترك في القناة</a>
+    
+    <!-- زر البحث -->
+    <form class="search-box" onsubmit="search(event)">
+      <input type="text" id="searchInput" placeholder="ابحث عن لعبة...">
+      <button type="submit">🔍 بحث</button>
+    </form>
   </div>
+
+  <script>
+    function search(e) {
+      e.preventDefault();
+      const query = document.getElementById("searchInput").value;
+      if (query.trim() !== "") {
+        window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}+king+gaming+star`, '_blank');
+      }
+    }
+  </script>
 
 </body>
 </html>
