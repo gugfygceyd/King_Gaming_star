@@ -802,5 +802,60 @@ https://discord.gg/yourservercode
 
 
 
-<!-- Tidio Chatbot -->
-<script src="//code.tidio.co/your_code_here.js" async></script>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KingBot - King Gaming Star</title>
+</head>
+<body style="background-color:#111; color:white; font-family:sans-serif;">
+  <h1 style="text-align:center;">👑 مرحبًا بك في King Gaming Star</h1>
+  <p style="text-align:center;">تحدث مع مساعدنا الذكي KingBot لمساعدتك في عالم الألعاب!</p>
+
+  <!-- ✅ KingBot - AI Chatbot for King Gaming Star -->
+  <div id="kingbot-container" style="position:fixed; bottom:20px; right:20px; z-index:9999;">
+    <button onclick="toggleChat()" style="padding:10px 15px; background:gold; color:black; border-radius:10px; font-weight:bold; box-shadow: 0 0 10px gold;">👑 KingBot</button>
+    <div id="chat-box" style="display:none; width:300px; height:400px; background:white; border:2px solid gold; border-radius:10px; padding:10px; margin-top:10px; overflow-y:auto;">
+      <div id="messages" style="height:85%; overflow-y:auto; font-family:sans-serif; color:black;"></div>
+      <input type="text" id="user-input" placeholder="اكتب سؤالك..." style="width:100%; padding:5px; border:1px solid #ccc;" onkeydown="if(event.key==='Enter'){sendMessage();}">
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const box = document.getElementById("chat-box");
+      box.style.display = box.style.display === "none" ? "block" : "none";
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("user-input");
+      const messages = document.getElementById("messages");
+      const userText = input.value;
+      messages.innerHTML += `<div><strong>أنت:</strong> ${userText}</div>`;
+      input.value = "";
+
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer YOUR_API_KEY"
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [
+            { role: "system", content: "أنت KingBot، مساعد ذكي للزوار في موقع King Gaming Star. تحدث بأسلوب محترم وممتع وقدم المساعدة في الألعاب." },
+            { role: "user", content: userText }
+          ]
+        })
+      });
+
+      const data = await response.json();
+      const reply = data.choices[0].message.content;
+      messages.innerHTML += `<div><strong>KingBot:</strong> ${reply}</div>`;
+      messages.scrollTop = messages.scrollHeight;
+    }
+  </script>
+</body>
+</html>
+
