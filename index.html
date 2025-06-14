@@ -669,3 +669,138 @@ https://discord.gg/yourservercode
 
 </body>
 </html>
+
+<a href="https://discord.gg/رابط-دعوتك" target="_blank" style="
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #5865F2;
+  color: white;
+  font-family: 'Cairo', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: 0.3s;
+">
+  🔗 انضم إلى مجتمعنا على Discord
+</a>
+
+
+<div style="text-align: center; padding: 20px;">
+  <h2 style="color: gold; font-family: Cairo;">تابعنا على مواقع التواصل الاجتماعي 👇</h2>
+
+  <a href="https://facebook.com/اسم_صفحتك" target="_blank" style="margin: 10px; padding: 12px 20px; background-color: #1877f2; color: white; border-radius: 10px; text-decoration: none; font-weight: bold;">📘 Facebook</a>
+
+  <a href="https://instagram.com/اسم_صفحتك" target="_blank" style="margin: 10px; padding: 12px 20px; background-color: #e1306c; color: white; border-radius: 10px; text-decoration: none; font-weight: bold;">📸 Instagram</a>
+
+  <a href="https://youtube.com/@اسم_قناتك" target="_blank" style="margin: 10px; padding: 12px 20px; background-color: #ff0000; color: white; border-radius: 10px; text-decoration: none; font-weight: bold;">▶️ YouTube</a>
+
+  <a href="https://tiktok.com/@اسم_حسابك" target="_blank" style="margin: 10px; padding: 12px 20px; background-color: #000000; color: white; border-radius: 10px; text-decoration: none; font-weight: bold;">🎵 TikTok</a>
+
+  <a href="https://discord.gg/رابط_الدعوة" target="_blank" style="margin: 10px; padding: 12px 20px; background-color: #5865F2; color: white; border-radius: 10px; text-decoration: none; font-weight: bold;">💬 Discord</a>
+
+  <a href="https://twitter.com/اسم_حسابك" target="_blank" style="margin: 10px; padding: 12px 20px; background-color: #1da1f2; color: white; border-radius: 10px; text-decoration: none; font-weight: bold;">🐦 X (Twitter)</a>
+</div>
+
+
+<section style="padding: 40px; background-color: #111; color: white; text-align: center;">
+  <h2 style="color: gold; font-family: 'Cairo'; font-size: 28px;">🎮 معرض الصور - KingGamingstar</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px;">
+    <img src="images/game1.jpg" alt="صورة 1" style="width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+    <img src="images/game2.jpg" alt="صورة 2" style="width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+    <img src="images/game3.jpg" alt="صورة 3" style="width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+    <img src="images/game4.jpg" alt="صورة 4" style="width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+  </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>معرض الصور | KingGamingstar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: white;
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h2 {
+      color: gold;
+      margin-top: 30px;
+      font-size: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 30px;
+    }
+    .gallery img {
+      width: 280px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px gold;
+    }
+    /* Lightbox style */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎮 معرض الصور - KingGamingstar</h2>
+
+  <div class="gallery">
+    <img src="images/game1.jpg" alt="Game 1" onclick="openLightbox(this.src)">
+    <img src="images/game2.jpg" alt="Game 2" onclick="openLightbox(this.src)">
+    <img src="images/game3.jpg" alt="Game 3" onclick="openLightbox(this.src)">
+    <img src="images/game4.jpg" alt="Game 4" onclick="openLightbox(this.src)">
+  </div>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+<!-- Tidio Chatbot -->
+<script src="//code.tidio.co/your_code_here.js" async></script>
