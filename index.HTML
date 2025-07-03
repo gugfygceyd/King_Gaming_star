@@ -1,87 +1,225 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html><html lang="ar">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>King Gaming Star</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" type="image/png">
   <style>
-    * {
+    body {
+      background-color: #1a1a1a;
+      color: #ffd700;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      overflow: hidden;
-    }
-    .video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: gold;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
+    header {
+      background: linear-gradient(to right, #444, #000);
+      padding: 20px;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
+      box-shadow: 0 0 10px #ffd700;
     }
-    h1 {
-      font-size: 3.5em;
-      margin-bottom: 20px;
-      text-shadow: 0 0 15px gold;
-    }
-    p {
-      font-size: 1.3em;
-      max-width: 700px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
       color: #ffd700;
-      margin-bottom: 30px;
-      line-height: 1.8;
     }
-    a.subscribe-button {
-      padding: 14px 30px;
+    .search-container {
+      text-align: center;
+      margin: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 60%;
+      border-radius: 10px;
+      border: none;
+      font-size: 1em;
+    }
+    .ai-section, .description, .amazon-store, .subscribe-section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .ai-section {
+      background-color: #222;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px #333;
+    }
+    .description {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .amazon-store {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .subscribe-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .subscribe-button {
+      background-color: #ffd700;
+      color: #1a1a1a;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
       font-size: 1.2em;
-      background: gold;
-      color: black;
-      text-decoration: none;
-      border-radius: 30px;
-      box-shadow: 0 0 15px gold;
-      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    a.subscribe-button:hover {
-      background: #ffcc00;
-      transform: scale(1.1);
+    .subscribe-button:hover {
+      background-color: #e6c200;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 15px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-
-  <!-- خلفية فيديو -->
-  <video class="video-bg" autoplay muted loop>
-    <source src="https://cdn.pixabay.com/video/2023/10/31/189305-876754222_large.mp4" type="video/mp4">
-    متصفحك لا يدعم تشغيل الفيديو.
-  </video>
-
-  <!-- المحتوى -->
-  <div class="overlay">
-    <h1>👑 King Gaming Star 👑</h1>
-    <p>نحن ملوك عالم الألعاب! اكتشف معنا مغامرات ملحمية، استراتيجيات احترافية، وضحك بلا حدود 🎮🔥<br>انضم إلينا وكن جزءًا من أسطورتنا الرقمية.</p>
-    <a class="subscribe-button" href="https://www.youtube.com/" target="_blank">اشترك في القناة</a>
-  </div>
-
+  <header>
+    <h1>King Gaming Star</h1>
+  </header>  <div class="search-container">
+    <input type="text" placeholder="ابحث هنا في محتوى القناة...">
+  </div>  <section class="ai-section">
+    <h2 style="color: #ffd700; text-align:center">مساعد الذكاء الاصطناعي</h2>
+    <p style="text-align:center">مرحبًا بك في مساعد King Gaming Star الذكي! اكتب سؤالك عن الألعاب، أسرار اللعبة، أو أي محتوى تريده وسنساعدك قريبًا.</p>
+  </section>  <section class="description">
+    <h2>من نحن؟</h2>
+    <p>
+      قناة <strong>King Gaming Star</strong> هي عالمك المميز في الجيمنج! نقدم لك أقوى المغامرات، الشروحات، والتجارب الفريدة لعشاق الألعاب، مع لمسة من الذكاء الاصطناعي الذي يجعل كل شيء أكثر ذكاءً ومتعة.
+    </p>
+  </section>  <section class="subscribe-section">
+    <h2>اشترك في القناة</h2>
+    <a href="https://www.youtube.com/@kinggamingstar" target="_blank">
+      <button class="subscribe-button">اشترك الآن</button>
+    </a>
+  </section>  <section class="amazon-store">
+    <h2>تسوق من متجر أمازون</h2>
+    <p>اكتشف أحدث الأدوات والألعاب والإكسسوارات عبر متجرنا المميز على أمازون.</p>
+    <a href="https://www.amazon.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" width="150">
+    </a>
+  </section>  <footer>
+    &copy; 2025 King Gaming Star. جميع الحقوق محفوظة.
+  </footer>
 </body>
 </html>
+_
+<!DOCTYPE html><html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Gaming Star</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #ffd700;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(to right, #444, #000);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px #ffd700;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #ffd700;
+    }
+    .search-container {
+      text-align: center;
+      margin: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 60%;
+      border-radius: 10px;
+      border: none;
+      font-size: 1em;
+    }
+    .ai-section, .description, .amazon-store, .subscribe-section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .ai-section {
+      background-color: #222;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px #333;
+    }
+    .description {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .amazon-store {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .subscribe-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .subscribe-button {
+      background-color: #ffd700;
+      color: #1a1a1a;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .subscribe-button:hover {
+      background-color: #e6c200;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 15px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>King Gaming Star</h1>
+  </header>  <div class="search-container">
+    <input type="text" placeholder="ابحث هنا في محتوى القناة...">
+  </div>  <section class="ai-section">
+    <h2 style="color: #ffd700; text-align:center">مساعد الذكاء الاصطناعي</h2>
+    <p style="text-align:center">مرحبًا بك في مساعد King Gaming Star الذكي! اكتب سؤالك عن الألعاب، أسرار اللعبة، أو أي محتوى تريده وسنساعدك قريبًا.</p>
+  </section>  <section class="description">
+    <h2>من نحن؟</h2>
+    <p>
+      قناة <strong>King Gaming Star</strong> هي عالمك المميز في الجيمنج! نقدم لك أقوى المغامرات، الشروحات، والتجارب الفريدة لعشاق الألعاب، مع لمسة من الذكاء الاصطناعي الذي يجعل كل شيء أكثر ذكاءً ومتعة.
+    </p>
+  </section>  <section class="subscribe-section">
+    <h2>اشترك في القناة</h2>
+    <a href="https://www.youtube.com/@kinggamingstar" target="_blank">
+      <button class="subscribe-button">اشترك الآن</button>
+    </a>
+  </section>  <section class="amazon-store">
+    <h2>تسوق من متجر أمازون</h2>
+    <p>اكتشف أحدث الأدوات والألعاب والإكسسوارات عبر متجرنا المميز على أمازون.</p>
+    <a href="https://www.amazon.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" width="150">
+    </a>
+  </section>  <footer>
+    &copy; 2025 King Gaming Star. جميع الحقوق محفوظة.
+  </footer>
+</body>
+</html>
+_
+<section style="text-align: center; margin-top: 40px;">
+  <img src="banner.png" alt="King Gaming Star Banner" style="max-width: 100%; border-radius: 15px; box-shadow: 0 0 20px #ffd700;">
+</section>
